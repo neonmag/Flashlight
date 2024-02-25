@@ -20,10 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Получаем менеджер камеры
+       
         cameraManager = (CameraManager) getSystemService(CAMERA_SERVICE);
         try {
-            // Получаем идентификатор камеры
+        
             cameraId = cameraManager.getCameraIdList()[0];
         } catch (CameraAccessException e) {
             e.printStackTrace();
@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isFlashOn) {
-                    // Выключаем фонарик
+                  
                     turnOffFlashLight();
                 } else {
-                    // Включаем фонарик
+                  
                     turnOnFlashLight();
                 }
             }
